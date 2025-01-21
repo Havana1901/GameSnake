@@ -98,3 +98,46 @@ canvas#gameCanvas {
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
+
+#soundButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 128, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+#soundButton:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 128, 0, 0.8);
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+#soundButton:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 8px 15px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 8px 15px rgba(0, 255, 0, 0.5);
+    }
+}

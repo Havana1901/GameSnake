@@ -70,7 +70,7 @@ function moveSnake() {
 
     if (head.x === food.x && head.y === food.y) {
         score++;
-        eatSound.play();
+        playEatSound()
         food = {
             x: Math.floor(Math.random()*(canvas.width/gridSize))*gridSize,
             y: Math.floor(Math.random()*(canvas.height/gridSize))*gridSize,
@@ -94,7 +94,7 @@ function checkCollision() {
 
 function gameLoop() {
     if(checkCollision()) {
-        failSound.play();
+        playGameOverSound()
         Swal.fire({
             title: `Game Over!`,
             text: `Your score: ${score}`,
@@ -147,5 +147,28 @@ document.addEventListener("keydown", (e) => {
         direction = {x : 1 , y : 0};
     }
 })
+
+let isSoundOn = true;
+document.getElementById('soundButton').addEventListener('click', () => {
+    isSoundOn = !isSoundOn;
+
+    if (isSoundOn) {
+        document.getElementById('soundButton').innerText = 'Turn Sound Off';
+    } else {
+        document.getElementById('soundButton').innerText = 'Turn Sound On';
+    }
+});
+
+function playEatSound() {
+    if (isSoundOn) {
+        eatSound.play();
+    }
+}
+
+function playGameOverSound() {
+    if (isSoundOn) {
+        failSound.play();
+    }
+}
 
 gameLoop()
