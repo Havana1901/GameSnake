@@ -28,11 +28,6 @@ foodImage.style.width = "250px";
 const eatSound = new Audio("./sound/eatSound.mp3");
 const failSound = new Audio("./sound/failSound.mp3");
 
-headImage.onload = () => {
-    bodyImage.onload = () => {
-        drawSnake();
-    };
-};
 
 function drawSnake() {
     snake.forEach((segment , index) => {
