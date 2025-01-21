@@ -130,14 +130,3 @@ canvas#gameCanvas {
     transform: scale(0.98);
 }
 
-@keyframes glow {
-    0% {
-        box-shadow: 0 8px 15px rgba(0, 255, 0, 0.5);
-    }
-    50% {
-        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.7);
-    }
-    100% {
-        box-shadow: 0 8px 15px rgba(0, 255, 0, 0.5);
-    }
-}
