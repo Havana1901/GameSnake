@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    body {
+      font-family: 'Poppins', sans-serif; /* Font hiện đại */
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient xanh đậm */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+<body>
+<h2 id="score">Score</h2>
+<h2 onclick="restart()">Restart</h2>
+<canvas id="gameCanvas" width="400" height="500"></canvas>
+
+<script>
+  function restart() {
+    location.reload();
+  }
+</script>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
